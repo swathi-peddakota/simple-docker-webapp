@@ -4,7 +4,7 @@ pipeline {
 
     tools {
         maven 'Maven3'
-        jdk 'JDK21'
+        
     }
 
     environment {
@@ -13,6 +13,8 @@ pipeline {
         IMAGE_TAG = "${env.BUILD_NUMBER}"
         CONTAINER_NAME = 'simple-docker-webapp'
         APP_PORT = '8080'
+        JAVA_HOME = '/usr/lib/jvm/java-21-openjdk-amd64'
+PATH = "${JAVA_HOME}/bin:${env.PATH}"
     }
 
     options {
