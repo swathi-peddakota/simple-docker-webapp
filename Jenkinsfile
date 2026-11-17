@@ -103,7 +103,7 @@ PATH = "${JAVA_HOME}/bin:${env.PATH}"
 
                     docker run -d \
                     --name ${CONTAINER_NAME} \
-                    -p ${APP_PORT}:8080 \
+                    -p 8081:8080 \
                     --restart unless-stopped \
                     ${DOCKERHUB_REPO}:latest
                 """
