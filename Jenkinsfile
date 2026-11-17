@@ -45,7 +45,7 @@ PATH = "${JAVA_HOME}/bin:${env.PATH}"
 
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('sonarQube1') {
+                withSonarQubeEnv('sonarQube') {
                     sh '''
                         mvn -B sonar:sonar \
                         -Dsonar.projectKey=simple-docker-webapp \
